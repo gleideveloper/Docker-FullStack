@@ -1,4 +1,4 @@
-# Projeto Docker-FullStack - README.md
+# Projeto Docker-FullStack
 
 Este é o README.md para o projeto Docker-FullStack.
 
