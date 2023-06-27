@@ -2,7 +2,7 @@
 
 Este é o README.md para o projeto Docker-FullStack.
 
-## Universidade Federal do Amazonas - Instituto de Computação (ICOMP)
+## UFAM - Instituto de Computação (ICOMP)
 
 Web Academy - Capacitação e Desenvolvimento em Web Full Stack
 Trabalho Prático - Docker
