@@ -60,17 +60,17 @@ Este comando irá executar o projeto utilizando o Docker Compose, criando e inic
 
 ### Listar os containers
 
+Para lista todos os containers basta adicionar (-a) no final de cada comando abaixo.
+
+- Containers em execução:
+
 ```
 docker ps
-```
-
-ou
-
-```
+docker container ls
 docker-compose ps
 ```
 
-Estes comandos listarão os containers em execução.
+Qualquer um destes comandos listarão os containers em execução.
 
 ### Listar as imagens
 
