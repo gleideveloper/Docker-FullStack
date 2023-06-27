@@ -5,8 +5,9 @@ Este é o README.md para o projeto Docker-FullStack.
 ## UFAM - Instituto de Computação (ICOMP)
 
 Web Academy - Capacitação e Desenvolvimento em Web Full Stack
-Trabalho Prático - Docker
-Aluno: Gleides Vinente
+
+- Docker: Trabalho Prático
+- Aluno: Gleides Vinente
 
 ### Objetivo
 
