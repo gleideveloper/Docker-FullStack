@@ -1,3 +1,5 @@
+USE loja-livros
+
 CREATE TABLE IF NOT EXISTS livros (
     id VARCHAR(36) PRIMARY KEY,
     nome VARCHAR(180) NOT NULL,

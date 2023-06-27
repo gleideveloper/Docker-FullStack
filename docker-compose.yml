@@ -1,32 +1,60 @@
 version: "3"
 
 services:
-  srvmysql:
+  bdmysql:
     image: mysql
     container_name: bdmysql
     ports:
       - 3306:3306
     environment:
-      - MYSQL_ROOT_PASSWORD=pass2023
       - MYSQL_DATABASE=loja-livros
+      - MYSQL_ROOT_PASSWORD=R@12345
     networks:
-      - rede_bd
-    restart: always
-  srvphpmyadmin:
+      - rede_livros
+    volumes:
+      - ./create_tables.sql:/docker-entrypoint-initdb.d/create_tables.sql
+      - dbMyApp:/var/lib/mysql
+
+  phpmyadmin:
     image: phpmyadmin
-    container_name: bdui
+    container_name: phpmyadmin
     ports:
-      - 8000:80
+      - 8080:80
     environment:
-      - PMA_HOST=srvmysql
+      - PMA_HOST=bdmysql
       - PMA_PORT=3306
       - PMA_USER=root
-      - PMA_PASSWORD=pass2023
+      - PMA_PASSWORD=R@12345
     networks:
-      - rede_bd
+      - rede_livros
+
+  backendlivros:
+    container_name: backendlivros
+    build:
+      context: ./webacademy-livros-backend
+      dockerfile: Dockerfile
+    ports:
+      - 4444:4444
+    networks:
+      - rede_livros
+    volumes:
+      - ./webacademy-livros-backend/log:/app/log
     depends_on:
-      - srvmysql
+      - bdmysql
+    restart: always
+
+  frontendlivros:
+    container_name: frontendlivros
+    build:
+      context: ./webacademy-livros-frontend
+      dockerfile: Dockerfile
+    ports:
+      - 8000:80
+    networks:
+      - rede_livros
 
 networks:
-  rede_bd:
+  rede_livros:
     driver: bridge
+volumes:
+  dbMyApp:

@@ -19,7 +19,7 @@ WORKDIR /app
 COPY package.json ./
 COPY package-lock.json ./
 COPY .env .
-COPY ./public ./public
+
 COPY --from=build /appbuild/dist ./dist
 
 RUN npm install --production
