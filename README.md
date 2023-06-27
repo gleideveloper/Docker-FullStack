@@ -48,9 +48,9 @@ Docker-FullStack/
   └── docker-compose.yml
 ```
 
-## Comandos Docker para execução
+## Comandos Docker
 
-### Rodar o projeto
+### Executar o projeto
 
 ```
 docker-compose up -d
@@ -94,7 +94,7 @@ docker volume ls
 
 Este comando listar os volumes criados pelo Docker.
 
-### Checar local do volume do banco
+#### Checar local do volume do banco
 
 - **Logs do Projeto**
 
