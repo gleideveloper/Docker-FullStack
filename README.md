@@ -2,6 +2,27 @@
 
 Este é o README.md para o projeto Docker-FullStack.
 
+## Universidade Federal do Amazonas - Instituto de Computação (ICOMP)
+
+Web Academy - Capacitação e Desenvolvimento em Web Full Stack
+Trabalho Prático - Docker
+Aluno: Gleides Vinente
+
+### Objetivo
+
+O objetivo deste trabalho prático é colocarmos em prática os conceitos aprendidos durante o módulo de Docker, colocando uma aplicação web no ar utilizando contêineres.
+
+## Descrição
+
+Você foi responsável por colocar no ar a aplicação de listagem de livros do Web Academy. Foi sugerido que a aplicação funcionasse de maneira flexível e de fácil configuração entre ambientes, então você decidiu utilizar o Docker para rodar as aplicações.
+
+A infraestrutura dessa aplicação consiste em:
+
+- Um servidor de banco de dados MySQL
+- Uma aplicação backend escrita em Node.js com Typescript
+- Uma aplicação frontend escrita em React com Typescript
+- Uma aplicação de gerenciamento de banco de dados, o PHPMyAdmin
+
 ## Repositório Remoto
 
 O repositório remoto do projeto está disponível no GitHub.
