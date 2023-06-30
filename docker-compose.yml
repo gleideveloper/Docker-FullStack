@@ -2,7 +2,7 @@ version: "3"
 
 services:
   bdmysql:
-    image: mysql
+    image: acrgleidev.azurecr.io/mysql:latest
     container_name: bdmysql
     ports:
       - 3306:3306
@@ -16,7 +16,7 @@ services:
       - dbMyApp:/var/lib/mysql
 
   phpmyadmin:
-    image: phpmyadmin
+    image: acrgleidev.azurecr.io/phpmyadmin:latest
     container_name: phpmyadmin
     ports:
       - 8080:80
@@ -29,6 +29,7 @@ services:
       - rede_livros
 
   backendlivros:
+    image: acrgleidev.azurecr.io/backendlivros:latest
     container_name: backendlivros
     build:
       context: ./webacademy-livros-backend
@@ -44,6 +45,7 @@ services:
     restart: always
 
   frontendlivros:
+    image: acrgleidev.azurecr.io/frontendlivros:latest
     container_name: frontendlivros
     build:
       context: ./webacademy-livros-frontend
