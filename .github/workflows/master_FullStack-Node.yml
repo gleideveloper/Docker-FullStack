@@ -1,0 +1,51 @@
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
+name: Build and deploy container app to Azure Web App - FullStack-Node
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: 'ubuntu-latest'
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2
+
+    - name: Log in to registry
+      uses: docker/login-action@v2
+      with:
+        registry: https://github.com/gleideveloper//
+        username: ${{ secrets.AzureAppService_ContainerUsername_4be3fadc6513461dacdf1e5324c4b7f4 }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_70b82e2bff7e4a58b336fb24e761baef }}
+
+    - name: Build and push container image to registry
+      uses: docker/build-push-action@v3
+      with:
+        push: true
+        tags: github.com/gleideveloper//${{ secrets.AzureAppService_ContainerUsername_4be3fadc6513461dacdf1e5324c4b7f4 }}/ngnix-node:${{ github.sha }}
+        file: ./Dockerfile
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: 'production'
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+
+    steps:
+    - name: Deploy to Azure Web App
+      id: deploy-to-webapp
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: 'FullStack-Node'
+        slot-name: 'production'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_e587e5e0aa984e35be55276cfeeccfab }}
+        images: 'github.com/gleideveloper//${{ secrets.AzureAppService_ContainerUsername_4be3fadc6513461dacdf1e5324c4b7f4 }}/ngnix-node:${{ github.sha }}'
