@@ -59,6 +59,14 @@ stages:
   condition: succeeded()
   jobs:
   - deployment: Deploy
+- task: DockerCompose@0
+  inputs:
+    containerregistrytype: 'Azure Container Registry'
+    azureSubscription: 'service-webapp'
+    azureContainerRegistry: '{"loginServer":"acrgleidev.azurecr.io", "id" : "/subscriptions/b535b073-98f7-4c06-99fd-68bf84e59f15/resourceGroups/rg-gleidev/providers/Microsoft.ContainerRegistry/registries/acrgleidev"}'
+    dockerComposeFile: '**/docker-compose.yml'
+    action: 'Run a Docker Compose command'
+    dockerComposeCommand: 'docker compose up -d'
     displayName: Deploy
     environment: $(environmentName)
     pool:
@@ -75,4 +83,4 @@ stages:
               appName: $(webAppName)
               runtimeStack: 'NODE|10.10'
               package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
-              startUpCommand: 'docker-compose'
+              startUpCommand: 'npm run start'
