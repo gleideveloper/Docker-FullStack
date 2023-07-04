@@ -34,5 +34,5 @@ steps:
 #      docker tag acrgleidev.azurecr.io/frontendlivros:$(Build.BuildId) acrgleidev.azurecr.io/frontendlivros:latest
 #      docker push acrgleidev.azurecr.io/backendlivros:latest
 #      docker push acrgleidev.azurecr.io/frontendlivros:latest
-  displayName: 'Push latest tag to ACR'
+  displayName: 'Push latest tag to ACR ' + ${TAG}
 
