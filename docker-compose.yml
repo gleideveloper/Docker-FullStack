@@ -43,8 +43,8 @@ services:
     restart: always
 
   frontendlivros:
-      image: acrgleidev.azurecr.io/frontendlivros:${TAG}
-      container_name: frontendlivros
+    image: acrgleidev.azurecr.io/frontendlivros:${TAG}
+    container_name: frontendlivros
     build:
       context: ./webacademy-livros-frontend
       dockerfile: Dockerfile
