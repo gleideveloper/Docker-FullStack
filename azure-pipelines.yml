@@ -29,8 +29,8 @@ steps:
       command: 'login'
 
 - script: |
-    docker tag acrgleidev.azurecr.io/backendlivros:${TAG} acrgleidev.azurecr.io/backendlivros:Latest
-    docker tag acrgleidev.azurecr.io/frontendlivros:${TAG} acrgleidev.azurecr.io/frontendlivros:Latest
+    docker tag acrgleidev.azurecr.io/backendlivros:$(Build.BuildId) acrgleidev.azurecr.io/backendlivros:Latest
+    docker tag acrgleidev.azurecr.io/frontendlivros:$(Build.BuildId) acrgleidev.azurecr.io/frontendlivros:Latest
     docker-compose push
 
   displayName: 'Push latest tag to ACR'
