@@ -40,8 +40,6 @@ services:
       - rede_livros
     volumes:
       - ./webacademy-livros-backend/log:/app/log
-    depends_on:
-      - bdmysql
     restart: always
 
   frontendlivros:
