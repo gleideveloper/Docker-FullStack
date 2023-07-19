@@ -7,7 +7,7 @@ import { ErroBase } from "./ErroBase";
  * ISBN de um livro que já existe na base
  * de dados da aplicação.
  *
- * @author Linnik Maciel <linnik.souza123@gmail.com>
+ * @author Gleides Vinente <gleidevelop@gmail.com>
  */
 class ISBNUnicoError extends ErroBase {
   public constructor(mensagem: string = "ISBN repetido.") {

@@ -5,7 +5,7 @@ import { Column, DataType, Model, Table } from "sequelize-typescript";
  * Classe de modelo que define um registro de um
  * livro na base de dados da aplicação.
  *
- * @author Linnik Maciel <linnik.souza123@gmail.com>
+ * @author Gleides Vinente <gleidevelop@gmail.com>
  */
 @Table({
   tableName: "livros",

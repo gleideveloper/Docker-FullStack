@@ -11,7 +11,7 @@ import { createServer, Server } from "node:http";
  * Função que inicializa os componentes necessários
  * para disponibilizar o servidor no ar.
  *
- * @author Linnik Maciel <linnik.souza123@gmail.com>
+ * @author Gleides Vinente <gleidevelop@gmail.com>
  */
 const iniciarAplicacao = async (): Promise<void> => {
   const logger: Logger = Logger.pegarInstancia();

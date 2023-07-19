@@ -16,7 +16,7 @@ import { UniqueConstraintError, ValidationError } from "sequelize";
  *
  * Esta classe implementa a interface {@link LivrosRepository}.
  *
- * @author Linnik Maciel <linnik.souza123@gmail.com>
+ * @author Gleides Vinente <gleidevelop@gmail.com>
  */
 class SequelizeLivrosRepository implements LivrosRepository {
   /**

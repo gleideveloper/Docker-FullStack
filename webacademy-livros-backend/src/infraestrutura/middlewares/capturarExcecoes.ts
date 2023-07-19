@@ -16,7 +16,7 @@ import { NextFunction, Request, Response } from "express";
  * @param req Objeto de requisição.
  * @param res Objeto de resposta.
  * @param next Próximo middleware do encadeamento.
- * @author Linnik Maciel <linnik.souza123@gmail.com>
+ * @author Gleides Vinente <gleidevelop@gmail.com>
  */
 const capturarExcecoes = async (
   erro: any,

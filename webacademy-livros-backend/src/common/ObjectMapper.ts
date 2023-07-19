@@ -15,7 +15,7 @@
  * para {@link Number}, o nome da classe pode
  * ser **NumberMapper**.
  *
- * @author Linnik Maciel <linnik.souza123@gmail.com>
+ * @author Gleides Vinente <gleidevelop@gmail.com>
  */
 abstract class ObjectMapper<K, V> {
   /**

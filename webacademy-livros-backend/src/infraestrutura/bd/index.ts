@@ -14,7 +14,7 @@ Dotenv.carregarVariaveis();
  * {@link Sequelize}.
  *
  * @returns Conexão com o banco de dados.
- * @author Linnik Maciel <linnik.souza123@gmail.com>
+ * @author Gleides Vinente <gleidevelop@gmail.com>
  */
 const gerarConexaoBDSequelize = async (): Promise<Sequelize> => {
   const logger = Logger.pegarInstancia();

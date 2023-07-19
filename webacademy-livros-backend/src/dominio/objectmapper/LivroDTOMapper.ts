@@ -8,7 +8,7 @@ import { Livro } from "../modelos/Livro";
  * de origem {@link Livro} para objetos de
  * destino {@link LivroDTO}.
  *
- * @author Linnik Maciel <linnik.souza123@gmail.com>
+ * @author Gleides Vinente <gleidevelop@gmail.com>
  */
 class LivroDTOMapper extends ObjectMapper<Livro, LivroDTO> {
   public constructor() {

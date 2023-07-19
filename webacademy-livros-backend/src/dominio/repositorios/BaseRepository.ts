@@ -4,7 +4,7 @@
  * de manipulação de registros na base de
  * dados da aplicação.
  *
- * @author Linnik Maciel <linnik.souza123@gmail.com>
+ * @author Gleides Vinente <gleidevelop@gmail.com>
  */
 interface BaseRepository<K, V> {
   /**

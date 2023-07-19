@@ -6,7 +6,7 @@ import { ErroBase } from "./ErroBase";
  * um registro não salvo na base de dados
  * da aplicação por um erro interno.
  *
- * @author Linnik Maciel <linnik.souza123@gmail.com>
+ * @author Gleides Vinente <gleidevelop@gmail.com>
  */
 class RegistroNaoSalvoError extends ErroBase {
   public constructor(

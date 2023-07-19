@@ -6,7 +6,7 @@ import { join } from "node:path";
  * Classe de carregamento de configurações da
  * aplicação em variáveis de ambiente.
  *
- * @author Linnik Maciel <linnik.souza123@gmail.com>
+ * @author Gleides Vinente <gleidevelop@gmail.com>
  */
 class Dotenv {
   /**

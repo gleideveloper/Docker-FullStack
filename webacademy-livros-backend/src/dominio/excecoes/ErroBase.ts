@@ -3,7 +3,7 @@
  * Classe abstrata que representa um
  * erro ocorrido dentro da aplicação.
  *
- * @author Linnik Maciel <linnik.souza123@gmail.com>
+ * @author Gleides Vinente <gleidevelop@gmail.com>
  */
 abstract class ErroBase extends Error {
   /**

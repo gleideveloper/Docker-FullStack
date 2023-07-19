@@ -6,7 +6,7 @@ import { Request, Response } from "express";
  * aplicação, respondendo às ações de chamada
  * para a rota base **\/api**.
  *
- * @author Linnik Maciel <linnik.souza123@gmail.com>
+ * @author Gleides Vinente <gleidevelop@gmail.com>
  */
 class HomeController {
   /**
@@ -21,12 +21,12 @@ class HomeController {
     res.json({
       nome: "webacademy-livros-backend",
       versao: "1.0.0",
-      dataVersao: "2023-05-08",
+      dataVersao: "2023-07-19",
       responsaveis: [
         {
-          nome: "linnikmaciel",
-          email: "linnik.souza123@gmail.com",
-          github: "https://github.com/linnikmaciel",
+          nome: "Gleides Vinente",
+          email: "gleidevelop@gmail.com",
+          github: "https://github.com/gleideveloper",
         },
       ],
     });

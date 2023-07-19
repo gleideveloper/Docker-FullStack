@@ -6,7 +6,7 @@ import { ErroBase } from "./ErroBase";
  * um registro não encontrado na base de
  * dados da aplicação.
  *
- * @author Linnik Maciel <linnik.souza123@gmail.com>
+ * @author Gleides Vinente <gleidevelop@gmail.com>
  */
 class RegistroNaoEncontradoError extends ErroBase {
   public constructor(mensagem: string = "Registro não encontrado.") {

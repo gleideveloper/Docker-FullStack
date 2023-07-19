@@ -9,7 +9,7 @@ import { Livro } from "../modelos/Livro";
  *
  * Esta interface extende a interface {@link BaseRepository}.
  *
- * @author Linnik Maciel <linnik.souza123@gmail.com>
+ * @author Gleides Vinente <gleidevelop@gmail.com>
  */
 interface LivrosRepository extends BaseRepository<Livro, string> {
   /**

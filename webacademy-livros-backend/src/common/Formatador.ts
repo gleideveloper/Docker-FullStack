@@ -6,7 +6,7 @@ Dotenv.carregarVariaveis();
  *
  * Classe utilitária que realiza a formatação de dados.
  *
- * @author Linnik Maciel <linnik.souza123@gmail.com>
+ * @author Gleides Vinente <gleidevelop@gmail.com>
  */
 class Formatador {
   /**

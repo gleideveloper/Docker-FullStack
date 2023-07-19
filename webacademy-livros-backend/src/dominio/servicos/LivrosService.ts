@@ -10,7 +10,7 @@ import { LivrosRepository } from "../repositorios/LivrosRepository";
  * Classe de serviço que executa as regras de
  * negócio de livros na aplicação.
  *
- * @author Linnik Maciel <linnik.souza123@gmail.com>
+ * @author Gleides Vinente <gleidevelop@gmail.com>
  */
 class LivrosService {
   /**

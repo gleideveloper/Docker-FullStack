@@ -7,7 +7,7 @@ import { ErroBase } from "./ErroBase";
  * para inserir/atualizar na base de dados
  * da aplicação.
  *
- * @author Linnik Maciel <linnik.souza123@gmail.com>
+ * @author Gleides Vinente <gleidevelop@gmail.com>
  */
 class ValidacaoError extends ErroBase {
   public constructor(mensagem: string, extras: object) {

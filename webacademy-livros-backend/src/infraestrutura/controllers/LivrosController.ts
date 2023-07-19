@@ -17,7 +17,7 @@ Dotenv.carregarVariaveis();
  * aplicação, respondendo às ações de chamada
  * para a rota base **\/api/livros**.
  *
- * @author Linnik Maciel <linnik.souza123@gmail.com>
+ * @author Gleides Vinente <gleidevelop@gmail.com>
  */
 class LivrosController {
   /**
