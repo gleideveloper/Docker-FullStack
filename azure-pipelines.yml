@@ -14,22 +14,22 @@ variables:
   TAG: $(Build.BuildId)
 
 steps:
-    -   task: DockerCompose@0
-        inputs:
-            containerregistrytype: 'Azure Container Registry'
-            azureSubscription: 'service-webapp'
-            azureContainerRegistry: '{"loginServer":"acrgleidev.azurecr.io", "id" : "/subscriptions/b535b073-98f7-4c06-99fd-68bf84e59f15/resourceGroups/rg-gleidev/providers/Microsoft.ContainerRegistry/registries/acrgleidev"}'
-            dockerComposeFile: '**/docker-compose.yml'
-            action: 'Build services'
-            pushServices: true
+- task: DockerCompose@0
+  inputs:
+    containerregistrytype: 'Azure Container Registry'
+    azureSubscription: 'service-webapp'
+    azureContainerRegistry: '{"loginServer":"acrgleidev.azurecr.io", "id" : "/subscriptions/b535b073-98f7-4c06-99fd-68bf84e59f15/resourceGroups/rg-gleidev/providers/Microsoft.ContainerRegistry/registries/acrgleidev"}'
+    dockerComposeFile: '**/docker-compose.yml'
+    action: 'Build services'
+    pushServices: true
 
-    -   task: Docker@2
-        inputs:
-            containerRegistry: 'ACR-Gleidev'
-            command: 'login'
+- task: Docker@2
+  inputs:
+      containerRegistry: 'ACR-Gleidev'
+      command: 'login'
 
-    -   script: |
-            docker-compose push
+- script: |
+    docker-compose push
 
-        displayName: 'Push latest tag to ACR'
+  displayName: 'Push latest tag to ACR'
 
