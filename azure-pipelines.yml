@@ -25,8 +25,8 @@ steps:
 
 - task: Docker@2
   inputs:
-      containerRegistry: 'ACR-Gleidev'
-      command: 'login'
+    containerRegistry: 'ACR-Gleidev'
+    command: 'login'
 
 - script: |
     docker-compose push
