@@ -12,21 +12,14 @@ const app = express();
 
 // Configurando o diretório de arquivos
 // estáticos da aplicação (.css, .js, .png etc)...
-app.use(
-    express.static(
-        join(
-            process.cwd(),
-            "public"
-        )
-    )
-);
+app.use(express.static(join(process.cwd(), "public")));
 
 // Configurando o middleware de formatação
 // de entradas JSON, no formato 'application/json'...
 app.use(express.json());
 
-// Configurando o middleware de liberação 
-// de cabeçalho Cross Origin Resource 
+// Configurando o middleware de liberação
+// de cabeçalho Cross Origin Resource
 // Sharing (CORS) da aplicação...
 app.use(cors());
 

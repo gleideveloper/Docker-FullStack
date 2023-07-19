@@ -6,17 +6,17 @@ import { FC, JSX } from "react";
 import { useNavigate } from "react-router-dom";
 
 const ListagemLivrosPage: FC = (): JSX.Element => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    return (
-        <Container sx={{ marginY: 2 }}>
-            <Button variant="contained" onClick={() => navigate("/adicionar-livro")}>
-                <Add color="secondary" /> {' Adicionar Novo Livro'}
-            </Button>
+  return (
+    <Container sx={{ marginY: 2 }}>
+      <Button variant="contained" onClick={() => navigate("/adicionar-livro")}>
+        <Add color="secondary" /> {" Adicionar Novo Livro"}
+      </Button>
 
-            <ListagemLivrosProvider />
-        </Container>
-    );
+      <ListagemLivrosProvider />
+    </Container>
+  );
 };
 
 export { ListagemLivrosPage };

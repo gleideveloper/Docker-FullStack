@@ -1,56 +1,44 @@
-import {
-    Alerta,
-    AlertaProps
-} from "../components/Alerta";
+import { Alerta, AlertaProps } from "../components/Alerta";
 
-import {
-    FC,
-    JSX,
-    ReactNode,
-    createContext,
-    useState
-} from "react";
+import { createContext, FC, JSX, ReactNode, useState } from "react";
 
 type AlertasProviderProps = {
-    children: ReactNode;
+  children: ReactNode;
 };
 type AlertasContextData = {
-    adicionarAlerta: (alerta: AlertaProps) => void;
-    limparAlertas: () => void;
+  adicionarAlerta: (alerta: AlertaProps) => void;
+  limparAlertas: () => void;
 };
 
 const AlertasContext = createContext({} as AlertasContextData);
 
-const AlertasProvider: FC<AlertasProviderProps> = ({ children }): JSX.Element => {
-    const [alertas, setAlertas] = useState<AlertaProps[]>([]);
+const AlertasProvider: FC<AlertasProviderProps> = ({
+  children,
+}): JSX.Element => {
+  const [alertas, setAlertas] = useState<AlertaProps[]>([]);
 
-    const adicionarAlerta = (alerta: AlertaProps) => {
-        setAlertas(alertas => [
-            ...alertas,
-            alerta
-        ]);
-    };
-    const limparAlertas = () => {
-        setAlertas([]);
-    };
+  const adicionarAlerta = (alerta: AlertaProps) => {
+    setAlertas((alertas) => [...alertas, alerta]);
+  };
+  const limparAlertas = () => {
+    setAlertas([]);
+  };
 
-    return (
-        <AlertasContext.Provider value={{ adicionarAlerta, limparAlertas }}>
-            {alertas && alertas.map((alerta, i) => (
-                <Alerta
-                    key={i}
-                    textoAlerta={alerta.textoAlerta}
-                    tipoAlerta={alerta.tipoAlerta}
-                    tempoExibicaoAlerta={alerta.tempoExibicaoAlerta}
-                />
-            ))}
+  return (
+    <AlertasContext.Provider value={{ adicionarAlerta, limparAlertas }}>
+      {alertas &&
+        alertas.map((alerta, i) => (
+          <Alerta
+            key={i}
+            textoAlerta={alerta.textoAlerta}
+            tipoAlerta={alerta.tipoAlerta}
+            tempoExibicaoAlerta={alerta.tempoExibicaoAlerta}
+          />
+        ))}
 
-            {children}
-        </AlertasContext.Provider>
-    )
+      {children}
+    </AlertasContext.Provider>
+  );
 };
 
-export {
-    AlertasContext,
-    AlertasProvider
-};
+export { AlertasContext, AlertasProvider };

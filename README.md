@@ -11,11 +11,14 @@ Web Academy - Capacitação e Desenvolvimento em Web Full Stack
 
 ### Objetivo
 
-O objetivo deste trabalho prático é colocarmos em prática os conceitos aprendidos durante o módulo de Docker, colocando uma aplicação web no ar utilizando contêineres.
+O objetivo deste trabalho prático é colocarmos em prática os conceitos aprendidos durante o módulo de Docker, colocando
+uma aplicação web no ar utilizando contêineres.
 
 ## Descrição
 
-Você foi responsável por colocar no ar a aplicação de listagem de livros do Web Academy. Foi sugerido que a aplicação funcionasse de maneira flexível e de fácil configuração entre ambientes, então você decidiu utilizar o Docker para rodar as aplicações.
+Você foi responsável por colocar no ar a aplicação de listagem de livros do Web Academy. Foi sugerido que a aplicação
+funcionasse de maneira flexível e de fácil configuração entre ambientes, então você decidiu utilizar o Docker para rodar
+as aplicações.
 
 A infraestrutura dessa aplicação consiste em:
 
@@ -27,7 +30,8 @@ A infraestrutura dessa aplicação consiste em:
 ## Repositório Remoto
 
 O repositório remoto do projeto está disponível no GitHub.
-Você pode acessá-lo em: [https://github.com/gleideveloper/Docker-FullStack](https://github.com/gleideveloper/Docker-FullStack).
+Você pode acessá-lo
+em: [https://github.com/gleideveloper/Docker-FullStack](https://github.com/gleideveloper/Docker-FullStack).
 
 ## Pré-condição
 
@@ -56,7 +60,8 @@ Docker-FullStack/
 docker-compose up -d
 ```
 
-Este comando irá executar o projeto utilizando o Docker Compose, criando e iniciando os containers necessários em segundo plano (-d).
+Este comando irá executar o projeto utilizando o Docker Compose, criando e iniciando os containers necessários em
+segundo plano (-d).
 
 ### Listar os containers
 
@@ -108,7 +113,8 @@ ls -la ./webacademy-livros-backend/log
 sudo ls -la /var/lib/docker/volumes/docker-fullstack_dbMyApp/_data
 ```
 
-Este comando exibirá o local do volume do banco de dados. Certifique-se de substituir "docker-fullstack_dbMyApp" pelo nome correto do volume utilizado em seu projeto.
+Este comando exibirá o local do volume do banco de dados. Certifique-se de substituir "docker-fullstack_dbMyApp" pelo
+nome correto do volume utilizado em seu projeto.
 
 ### Listar as networks
 

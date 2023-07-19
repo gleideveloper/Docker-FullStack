@@ -9,18 +9,17 @@ import { ThemeProvider } from "@mui/material";
 import { FC } from "react";
 
 const App: FC = (): JSX.Element => {
-
-    return (
-        <ThemeProvider theme={theme}>
-            <AppContainer>
-                <Cabecalho />
-                <AlertasProvider>
-                    <Router />
-                </AlertasProvider>
-                <Rodape />
-            </AppContainer>
-        </ThemeProvider>
-    );
+  return (
+    <ThemeProvider theme={theme}>
+      <AppContainer>
+        <Cabecalho />
+        <AlertasProvider>
+          <Router />
+        </AlertasProvider>
+        <Rodape />
+      </AppContainer>
+    </ThemeProvider>
+  );
 };
 
 export { App };

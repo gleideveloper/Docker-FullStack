@@ -3,24 +3,25 @@ import { ListagemLivrosPage } from "./pages/ListagemLivrosPage";
 import { VisualizacaoLivroPage } from "./pages/VisualizacaoLivroPage";
 
 import { FC } from "react";
-import {
-    BrowserRouter,
-    Routes,
-    Route
-} from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const Router: FC = () => {
-
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" index element={<ListagemLivrosPage />} />
-                <Route path="/adicionar-livro" element={<FormularioLivroPage />} />
-                <Route path="/editar-livro/:isbnLivroSelecionado" element={<FormularioLivroPage />} />
-                <Route path="/visualizar/:isbnLivroSelecionado" element={<VisualizacaoLivroPage />} />
-            </Routes>
-        </BrowserRouter>
-    );
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" index element={<ListagemLivrosPage />} />
+        <Route path="/adicionar-livro" element={<FormularioLivroPage />} />
+        <Route
+          path="/editar-livro/:isbnLivroSelecionado"
+          element={<FormularioLivroPage />}
+        />
+        <Route
+          path="/visualizar/:isbnLivroSelecionado"
+          element={<VisualizacaoLivroPage />}
+        />
+      </Routes>
+    </BrowserRouter>
+  );
 };
 
 export { Router };
